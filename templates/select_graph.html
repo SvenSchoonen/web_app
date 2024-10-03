@@ -1,0 +1,26 @@
+<!-- select_graph.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Players for Graph</title>
+</head>
+<body>
+    <h1>Select Players for Graph</h1>
+    <form method="POST" action="{{ url_for('graph') }}">
+        <label for="players">Select Players:</label><br>
+        {% for player in players %}
+            <input type="checkbox" name="players" value="{{ player.name }}">{{ player.name }}<br>
+        {% endfor %}
+        <br>
+        <label for="date">Date (optional):</label>
+        <input type="date" name="date"><br><br>
+        <label for="place">Location (optional):</label>
+        <input type="text" name="place"><br><br>
+        <input type="submit" value="Generate Graph">
+    </form>
+    <br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

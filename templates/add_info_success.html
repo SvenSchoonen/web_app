@@ -1,0 +1,7 @@
+<h2>Info Added</h2>
+<p><strong>Date:</strong> {{ players[0].date }}</p>
+<p><strong>Place:</strong> {{ players[0].place }}</p>
+{% for player in players %}
+    <p><strong>Name:</strong> {{ player.name }}</p>
+    <p><strong>Score:</strong> {{ player.number }}</p>
+{% endfor %}

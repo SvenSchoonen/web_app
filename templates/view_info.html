@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        {% for info in info_list %}
+            <li>{{ info.name }}: {{ info.number }}
+               <a href="{{ url_for('edit_info', info_id=info.id) }}">Edit</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

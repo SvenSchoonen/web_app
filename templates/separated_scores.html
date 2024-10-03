@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        {% for name, score in total_dict.items() %}
+            <li>{{ name }}: {{ score }}
+                <ul>
+                    {% for number in individual_dict[name] %}
+                        <li>{{ number }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

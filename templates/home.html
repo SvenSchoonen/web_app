@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <a href="{{ url_for('view_info') }}">View Current Info</a>
+    <br>
+    <a href="{{ url_for('add_info_form') }}">Add Players</a>
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <p><a href="/player_graph">View Player Scores Graph</a></p>
+   <!-- In home.html or another template -->
+	<a href="{{ url_for('graph') }}">View Scores Graph</a>
+</body>
+</html>

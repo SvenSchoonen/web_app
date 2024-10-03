@@ -1,0 +1,16 @@
+<!-- graph.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Scores Graph</title>
+</head>
+<body>
+    <h1>Player Scores Graph</h1>
+    <div>
+        {{ graph_html | safe }}  <!-- Display the graph -->
+    </div>
+    <a href="{{ url_for('home') }}">Back to Home</a>  <!-- Link back to the home page -->
+</body>
+</html>
